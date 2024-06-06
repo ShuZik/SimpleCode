@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA056EFD2C106142005D34FC /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA056EFC2C106142005D34FC /* GradientView.swift */; };
 		BA93667D2BEE1CCC00B93F90 /* SimpleCodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA93667C2BEE1CCC00B93F90 /* SimpleCodeApp.swift */; };
 		BA93667F2BEE1CCC00B93F90 /* HelloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA93667E2BEE1CCC00B93F90 /* HelloView.swift */; };
 		BA9366832BEE1CCD00B93F90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA9366822BEE1CCD00B93F90 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA056EFC2C106142005D34FC /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		BA9366792BEE1CCC00B93F90 /* SimpleCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA93667C2BEE1CCC00B93F90 /* SimpleCodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCodeApp.swift; sourceTree = "<group>"; };
 		BA93667E2BEE1CCC00B93F90 /* HelloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloView.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				BA93667E2BEE1CCC00B93F90 /* HelloView.swift */,
 				BA9366A92BEE1D0B00B93F90 /* ImgeTextView.swift */,
 				BAD45A222C0CC59800293F18 /* ProgressChart.swift */,
+				BA056EFC2C106142005D34FC /* GradientView.swift */,
 				BA9366822BEE1CCD00B93F90 /* Assets.xcassets */,
 				BA9366842BEE1CCD00B93F90 /* SimpleCode.entitlements */,
 				BA9366852BEE1CCD00B93F90 /* Preview Content */,
@@ -267,6 +270,7 @@
 			files = (
 				BA93667F2BEE1CCC00B93F90 /* HelloView.swift in Sources */,
 				BA9366AA2BEE1D0B00B93F90 /* ImgeTextView.swift in Sources */,
+				BA056EFD2C106142005D34FC /* GradientView.swift in Sources */,
 				BAD45A232C0CC59800293F18 /* ProgressChart.swift in Sources */,
 				BA93667D2BEE1CCC00B93F90 /* SimpleCodeApp.swift in Sources */,
 			);

@@ -24,9 +24,10 @@ struct ImgeTextView: View {
     }
     
     var image: some View {
-        Image("Sky")
+        Image("Background")
             .resizable()
             .aspectRatio(contentMode: .fill)
+            .shadow(radius: 10)
     }
 }
 
