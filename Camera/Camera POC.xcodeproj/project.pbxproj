@@ -9,12 +9,22 @@
 /* Begin PBXBuildFile section */
 		BA44C90C2CC912B9002A16C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA44C9062CC912B9002A16C4 /* Assets.xcassets */; };
 		BA44C90E2CC912B9002A16C4 /* CameraPOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA44C9092CC912B9002A16C4 /* CameraPOC.swift */; };
-		BA44C90F2CC912B9002A16C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA44C90A2CC912B9002A16C4 /* ContentView.swift */; };
+		BA44C90F2CC912B9002A16C4 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA44C90A2CC912B9002A16C4 /* CameraView.swift */; };
 		BA6680D72CCA964400D95364 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6680D32CCA964400D95364 /* Action.swift */; };
 		BA6680D82CCA964400D95364 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6680D52CCA964400D95364 /* Store.swift */; };
 		BA6680D92CCA964400D95364 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6680D42CCA964400D95364 /* Dispatcher.swift */; };
-		BA6680DF2CCA9A9300D95364 /* Camera-POC-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA6680DE2CCA9A9300D95364 /* Camera-POC-Info.plist */; };
 		BA6680E42CCA9D0900D95364 /* Camera-Watch-POC-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA6680E32CCA9D0900D95364 /* Camera-Watch-POC-Info.plist */; };
+		BA6680E52CCA9DDE00D95364 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6680D32CCA964400D95364 /* Action.swift */; };
+		BA6680E62CCA9DE400D95364 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6680D42CCA964400D95364 /* Dispatcher.swift */; };
+		BA6680E72CCA9DE900D95364 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6680D52CCA964400D95364 /* Store.swift */; };
+		BA6680E92CCA9E7500D95364 /* PhotoDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6680E82CCA9E7500D95364 /* PhotoDelegate.swift */; };
+		BA6680EB2CCFAA0100D95364 /* CameraAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6680EA2CCFAA0100D95364 /* CameraAction.swift */; };
+		BA6680ED2CCFAA1700D95364 /* CameraStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6680EC2CCFAA1700D95364 /* CameraStore.swift */; };
+		BA6680EF2CCFAA7B00D95364 /* WatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6680EE2CCFAA7B00D95364 /* WatchManager.swift */; };
+		BA6680F12CCFAA9F00D95364 /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6680F02CCFAA9F00D95364 /* CameraPreview.swift */; };
+		BA6680F32CCFAABA00D95364 /* WatchStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6680F22CCFAABA00D95364 /* WatchStatus.swift */; };
+		BA6680F52CCFABDC00D95364 /* CameraDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6680F42CCFABDC00D95364 /* CameraDispatcher.swift */; };
+		BA6680FA2CCFB0F300D95364 /* CameraState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6680F92CCFB0F300D95364 /* CameraState.swift */; };
 		BAB8A1A62CC936C5005BD6EC /* Camera Watch POC.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = BAB8A1992CC936C4005BD6EC /* Camera Watch POC.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BAB8A1B22CC936D1005BD6EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAB8A1AD2CC936D1005BD6EC /* Assets.xcassets */; };
 		BAB8A1B32CC936D1005BD6EC /* CameraWatchPOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB8A1AE2CC936D1005BD6EC /* CameraWatchPOC.swift */; };
@@ -49,12 +59,20 @@
 		BA44C8E62CC91262002A16C4 /* Camera POC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Camera POC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA44C9062CC912B9002A16C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA44C9092CC912B9002A16C4 /* CameraPOC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPOC.swift; sourceTree = "<group>"; };
-		BA44C90A2CC912B9002A16C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BA44C90A2CC912B9002A16C4 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		BA6680D32CCA964400D95364 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		BA6680D42CCA964400D95364 /* Dispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
 		BA6680D52CCA964400D95364 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		BA6680DE2CCA9A9300D95364 /* Camera-POC-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Camera-POC-Info.plist"; sourceTree = "<group>"; };
 		BA6680E32CCA9D0900D95364 /* Camera-Watch-POC-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Camera-Watch-POC-Info.plist"; sourceTree = "<group>"; };
+		BA6680E82CCA9E7500D95364 /* PhotoDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDelegate.swift; sourceTree = "<group>"; };
+		BA6680EA2CCFAA0100D95364 /* CameraAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraAction.swift; sourceTree = "<group>"; };
+		BA6680EC2CCFAA1700D95364 /* CameraStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraStore.swift; sourceTree = "<group>"; };
+		BA6680EE2CCFAA7B00D95364 /* WatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchManager.swift; sourceTree = "<group>"; };
+		BA6680F02CCFAA9F00D95364 /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
+		BA6680F22CCFAABA00D95364 /* WatchStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchStatus.swift; sourceTree = "<group>"; };
+		BA6680F42CCFABDC00D95364 /* CameraDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDispatcher.swift; sourceTree = "<group>"; };
+		BA6680F92CCFB0F300D95364 /* CameraState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraState.swift; sourceTree = "<group>"; };
 		BAB8A1992CC936C4005BD6EC /* Camera Watch POC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Camera Watch POC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB8A1AD2CC936D1005BD6EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAB8A1AE2CC936D1005BD6EC /* CameraWatchPOC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraWatchPOC.swift; sourceTree = "<group>"; };
@@ -84,6 +102,7 @@
 			children = (
 				BA44C90B2CC912B9002A16C4 /* Camera POC */,
 				BAB8A1B02CC936D1005BD6EC /* Camera Watch POC */,
+				BA6680D62CCA964400D95364 /* 􀯠 Flux */,
 				BA44C8E72CC91262002A16C4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -110,8 +129,9 @@
 			isa = PBXGroup;
 			children = (
 				BA44C9092CC912B9002A16C4 /* CameraPOC.swift */,
-				BA44C90A2CC912B9002A16C4 /* ContentView.swift */,
-				BA6680D62CCA964400D95364 /* 􀯠 Flux */,
+				BA6680F62CCFAF8D00D95364 /* CameraView */,
+				BA6680F72CCFAF9E00D95364 /* Photo */,
+				BA6680F82CCFAFA600D95364 /* Watch */,
 				BA44C9072CC912B9002A16C4 /* 􀈚 Resources */,
 			);
 			path = "Camera POC";
@@ -125,6 +145,36 @@
 				BA6680D52CCA964400D95364 /* Store.swift */,
 			);
 			path = "􀯠 Flux";
+			sourceTree = "<group>";
+		};
+		BA6680F62CCFAF8D00D95364 /* CameraView */ = {
+			isa = PBXGroup;
+			children = (
+				BA44C90A2CC912B9002A16C4 /* CameraView.swift */,
+				BA6680EA2CCFAA0100D95364 /* CameraAction.swift */,
+				BA6680F42CCFABDC00D95364 /* CameraDispatcher.swift */,
+				BA6680EC2CCFAA1700D95364 /* CameraStore.swift */,
+				BA6680F92CCFB0F300D95364 /* CameraState.swift */,
+			);
+			path = CameraView;
+			sourceTree = "<group>";
+		};
+		BA6680F72CCFAF9E00D95364 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				BA6680E82CCA9E7500D95364 /* PhotoDelegate.swift */,
+				BA6680F02CCFAA9F00D95364 /* CameraPreview.swift */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
+		BA6680F82CCFAFA600D95364 /* Watch */ = {
+			isa = PBXGroup;
+			children = (
+				BA6680EE2CCFAA7B00D95364 /* WatchManager.swift */,
+				BA6680F22CCFAABA00D95364 /* WatchStatus.swift */,
+			);
+			path = Watch;
 			sourceTree = "<group>";
 		};
 		BAB8A1AC2CC936D1005BD6EC /* 􀈚 Resources */ = {
@@ -232,7 +282,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA6680DF2CCA9A9300D95364 /* Camera-POC-Info.plist in Resources */,
 				BA44C90C2CC912B9002A16C4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,10 +302,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA6680F52CCFABDC00D95364 /* CameraDispatcher.swift in Sources */,
 				BA44C90E2CC912B9002A16C4 /* CameraPOC.swift in Sources */,
-				BA44C90F2CC912B9002A16C4 /* ContentView.swift in Sources */,
+				BA6680FA2CCFB0F300D95364 /* CameraState.swift in Sources */,
+				BA44C90F2CC912B9002A16C4 /* CameraView.swift in Sources */,
+				BA6680ED2CCFAA1700D95364 /* CameraStore.swift in Sources */,
+				BA6680EB2CCFAA0100D95364 /* CameraAction.swift in Sources */,
+				BA6680EF2CCFAA7B00D95364 /* WatchManager.swift in Sources */,
+				BA6680F12CCFAA9F00D95364 /* CameraPreview.swift in Sources */,
 				BA6680D72CCA964400D95364 /* Action.swift in Sources */,
 				BA6680D82CCA964400D95364 /* Store.swift in Sources */,
+				BA6680E92CCA9E7500D95364 /* PhotoDelegate.swift in Sources */,
+				BA6680F32CCFAABA00D95364 /* WatchStatus.swift in Sources */,
 				BA6680D92CCA964400D95364 /* Dispatcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,7 +322,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA6680E72CCA9DE900D95364 /* Store.swift in Sources */,
 				BAB8A1B32CC936D1005BD6EC /* CameraWatchPOC.swift in Sources */,
+				BA6680E52CCA9DDE00D95364 /* Action.swift in Sources */,
+				BA6680E62CCA9DE400D95364 /* Dispatcher.swift in Sources */,
 				BAB8A1B42CC936D1005BD6EC /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

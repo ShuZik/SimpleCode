@@ -1,8 +1,8 @@
 //
 //  Dispatcher.swift
-//  FluxSwift
+//  Camera POC
 //
-//  Created by ShuZik on 24.03.2024.
+//  Created by ShuZik on 24.09.2024.
 //
 
 public protocol Dispatcher {

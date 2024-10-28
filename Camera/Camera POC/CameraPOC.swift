@@ -11,7 +11,7 @@ import SwiftUI
 struct CameraPOC: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CameraView(dispatcher: CameraDispatcher())
         }
     }
 }
