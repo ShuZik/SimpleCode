@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    // Модель для представления экрана в списке
     struct ScreenItem: Identifiable {
         let id = UUID()
         let title: String
@@ -20,7 +19,6 @@ struct ContentView: View {
         }
     }
     
-    // Массив доступных экранов
     private let screens: [ScreenItem] = [
         ScreenItem(title: "Hello View", destination: HelloView()),
         ScreenItem(title: "Image Text View", destination: ImgeTextView(text: "Hello")),
@@ -28,6 +26,26 @@ struct ContentView: View {
         ScreenItem(title: "Gradient View", destination: GradientView()),
         ScreenItem(title: "Matrix Rain", destination: MatrixRainView())
     ]
+    
+    init() {
+        let appearance = UINavigationBarAppearance()
+
+        appearance.configureWithTransparentBackground()
+        appearance.backgroundColor = .clear
+        appearance.backgroundEffect = nil        
+        appearance.shadowColor = .clear
+        appearance.backButtonAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.clear]
+        
+        let backImage = UIImage(systemName: "chevron.left")?
+            .withTintColor(.white, renderingMode: .alwaysOriginal)
+        appearance.setBackIndicatorImage(backImage, transitionMaskImage: backImage)
+        
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().compactAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        
+        UINavigationBar.appearance().tintColor = .white
+    }
     
     var body: some View {
         NavigationView {

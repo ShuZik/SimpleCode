@@ -13,9 +13,29 @@ struct MatrixRainView: View {
     
     let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     
+    let islandWidth: CGFloat = 127
+    let islandHeight: CGFloat = 39
+    let islandY: CGFloat = -60
+    
     var body: some View {
         ZStack {
             Color.black.edgesIgnoringSafeArea(.all)
+            
+            // Текст из Матрицы с овальным фоном
+            ZStack {
+                Ellipse()
+                    .fill(Color.red.opacity(0.05))
+                    .frame(width: 300, height: 120)
+                
+                VStack(alignment: .leading, spacing: 20) {
+                    Text("Wake up, Neo...")
+                        .font(.custom("Courier", size: 20))
+                        .foregroundColor(.green)
+                    Text("The Matrix has you...")
+                        .font(.custom("Courier", size: 20))
+                        .foregroundColor(.green)
+                }
+            }
             
             ForEach(characters) { character in
                 Text(character.value)
@@ -37,42 +57,57 @@ struct MatrixRainView: View {
         }
     }
     
+    // Остальной код остается без изменений
     private func startRain() {
-        // Создаем начальное распределение символов по всему экрану
-        let screenHeight = UIScreen.main.bounds.height
-        
-        for _ in 0...50 {
-            let newChar = RainCharacter(
-                value: String(randomMatrixCharacter()),
-                x: CGFloat.random(in: 0...UIScreen.main.bounds.width),
-                y: CGFloat.random(in: -50...screenHeight), // Распределяем по всей высоте
-                opacity: Double.random(in: 0.5...1),
-                duration: Double.random(in: 0.5...1.5)
-            )
-            characters.append(newChar)
+        for _ in 0...4 {
+            DispatchQueue.main.asyncAfter(deadline: .now() + Double.random(in: 0...1.5)) {
+                addNewCharacter()
+            }
         }
     }
     
     private func updateRain() {
         characters = characters.filter { $0.y < UIScreen.main.bounds.height + 50 }
-        if characters.count < 50 {
+        
+        if characters.count < 300 {
             addNewCharacter()
         }
         
         characters = characters.map { character in
             var newChar = character
-            newChar.y += CGFloat.random(in: 15...25) // Добавляем случайную скорость падения
+            let fallSpeed = CGFloat.random(in: 7...20)
+            newChar.y += fallSpeed
+            
+            let distanceFromIsland = newChar.y - (islandY + islandHeight/2)
+            if distanceFromIsland > 0 {
+                let screenWidth = UIScreen.main.bounds.width
+                
+                if let spreadDirection = character.spreadDirection {
+                    let spreadSpeed = CGFloat.random(in: 0.5...2.0)
+                    newChar.x += spreadDirection * spreadSpeed
+                } else {
+                    newChar.spreadDirection = [-1.0, 1.0].randomElement()!
+                }
+                
+                newChar.x = min(max(0, newChar.x), screenWidth)
+            }
+            
             return newChar
         }
     }
     
     private func addNewCharacter() {
+        let islandLeftEdge = (UIScreen.main.bounds.width - islandWidth) / 2
+        let islandRightEdge = islandLeftEdge + islandWidth
+        let startX = CGFloat.random(in: islandLeftEdge...islandRightEdge)
+        
         let newChar = RainCharacter(
             value: String(randomMatrixCharacter()),
-            x: CGFloat.random(in: 0...UIScreen.main.bounds.width),
-            y: -50,
+            x: startX,
+            y: islandY + islandHeight/2,
             opacity: Double.random(in: 0.5...1),
-            duration: Double.random(in: 0.5...1.5)
+            duration: Double.random(in: 0.5...1.5),
+            spreadDirection: nil
         )
         characters.append(newChar)
     }
@@ -84,6 +119,13 @@ struct MatrixRainView: View {
     }
 }
 
+struct MatrixRainView_Previews: PreviewProvider {
+    static var previews: some View {
+        MatrixRainView()
+    }
+}
+
+// MARL: - RainCharacter
 struct RainCharacter: Identifiable {
     let id = UUID()
     let value: String
@@ -91,10 +133,5 @@ struct RainCharacter: Identifiable {
     var y: CGFloat
     let opacity: Double
     let duration: Double
-}
-
-struct MatrixRainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MatrixRainView()
-    }
+    var spreadDirection: CGFloat?
 }
