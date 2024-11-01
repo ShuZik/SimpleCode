@@ -530,7 +530,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"$(SRCROOT)/Camera Watch POC/􀈚 Resources/Assets.xcassets\"";
-				DEVELOPMENT_TEAM = J26VBSX62G;
+				DEVELOPMENT_TEAM = 5F6HXXUQ56;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Camera Watch POC/􀈚 Resources/Camera-Watch-POC-Info.plist";
@@ -561,7 +561,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"$(SRCROOT)/Camera Watch POC/􀈚 Resources/Assets.xcassets\"";
-				DEVELOPMENT_TEAM = J26VBSX62G;
+				DEVELOPMENT_TEAM = 5F6HXXUQ56;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Camera Watch POC/􀈚 Resources/Camera-Watch-POC-Info.plist";

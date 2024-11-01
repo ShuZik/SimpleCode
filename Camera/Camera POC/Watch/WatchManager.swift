@@ -9,10 +9,9 @@ import WatchConnectivity
 
 class WatchManager: NSObject, WCSessionDelegate {
     static let shared = WatchManager()
-    private let dispatcher: CameraDispatcher
+//    private let dispatcher: CameraDispatcher
     
     private override init() {
-        self.dispatcher = CameraDispatcher.shared
         super.init()
         setupSession()
     }
@@ -26,9 +25,9 @@ class WatchManager: NSObject, WCSessionDelegate {
     }
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        DispatchQueue.main.async {
-            self.dispatcher.dispatch(.updateWatchConnection(session.isReachable))
-        }
+//        DispatchQueue.main.async {
+//            self.dispatcher.dispatch(.updateWatchConnection(session.isReachable))
+//        }
     }
     
     func sessionDidBecomeInactive(_ session: WCSession) {
@@ -40,31 +39,31 @@ class WatchManager: NSObject, WCSessionDelegate {
     }
     
     func sessionReachabilityDidChange(_ session: WCSession) {
-        DispatchQueue.main.async {
-            self.dispatcher.dispatch(.updateWatchConnection(session.isReachable))
-        }
+//        DispatchQueue.main.async {
+//            self.dispatcher.dispatch(.updateWatchConnection(session.isReachable))
+//        }
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
-        DispatchQueue.main.async {
-            if message["watchButtonPressed"] as? Bool == true {
-                self.dispatcher.dispatch(.takePhoto)
-            }
-            if message["flipCamera"] as? Bool == true {
-                self.dispatcher.dispatch(.flipCamera)
-            }
-            replyHandler(["status": "Command received"])
-        }
+//        DispatchQueue.main.async {
+//            if message["watchButtonPressed"] as? Bool == true {
+//                self.dispatcher.dispatch(.takePhoto)
+//            }
+//            if message["flipCamera"] as? Bool == true {
+//                self.dispatcher.dispatch(.flipCamera)
+//            }
+//            replyHandler(["status": "Command received"])
+//        }
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        DispatchQueue.main.async {
-            if message["watchButtonPressed"] as? Bool == true {
-                self.dispatcher.dispatch(.takePhoto)
-            }
-            if message["flipCamera"] as? Bool == true {
-                self.dispatcher.dispatch(.flipCamera)
-            }
-        }
+//        DispatchQueue.main.async {
+//            if message["watchButtonPressed"] as? Bool == true {
+//                self.dispatcher.dispatch(.takePhoto)
+//            }
+//            if message["flipCamera"] as? Bool == true {
+//                self.dispatcher.dispatch(.flipCamera)
+//            }
+//        }
     }
 }

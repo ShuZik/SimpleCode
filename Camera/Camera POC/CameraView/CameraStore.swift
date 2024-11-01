@@ -7,6 +7,7 @@
 
 import AVFoundation
 import Combine
+import UIKit
 
 final class CameraStore: ObservableObject {
     
@@ -16,7 +17,7 @@ final class CameraStore: ObservableObject {
     private let output = AVCapturePhotoOutput()
     
     init() {
-        state = CameraState()
+        self.state = CameraState()
     }
     
     func handleAction(_ action: CameraAction) {
@@ -39,6 +40,7 @@ final class CameraStore: ObservableObject {
     }
 }
 
+// MARK: - Private Camera Methods
 private extension CameraStore {
     
     func setupCamera() {
@@ -49,11 +51,10 @@ private extension CameraStore {
             if session.canAddInput(input) {
                 session.addInput(input)
             }
-  
-            // ???
-//            if session.canAddOutput(state.output) {
-//                session.addOutput(state.output)
-//            }
+            
+            if session.canAddOutput(output) {
+                session.addOutput(output)
+            }
             
             let preview = AVCaptureVideoPreviewLayer(session: session)
             preview.videoGravity = .resizeAspectFill
@@ -70,7 +71,7 @@ private extension CameraStore {
     func takePhoto() {
         print("Taking photo...")
         let settings = AVCapturePhotoSettings()
-        output.capturePhoto(with: settings, delegate: PhotoDelegate())
+        output.capturePhoto(with: settings, delegate: CameraPhotoDelegate(store: self))
     }
     
     func flipCamera() {
@@ -107,5 +108,44 @@ private extension CameraStore {
     
     func updateWatchConnection(_ isConnected: Bool) {
         state.isWatchConnected = isConnected
+    }
+}
+
+// MARK: - Camera Photo Delegate
+private final class CameraPhotoDelegate: NSObject, AVCapturePhotoCaptureDelegate {
+    private let store: CameraStore
+    
+    init(store: CameraStore) {
+        self.store = store
+        super.init()
+    }
+    
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        if let error = error {
+            DispatchQueue.main.async {
+                self.store.handleAction(.setSaveError(error.localizedDescription))
+                self.store.handleAction(.showSaveAlert(true))
+            }
+            return
+        }
+        
+        guard let imageData = photo.fileDataRepresentation(),
+              let image = UIImage(data: imageData) else {
+            self.store.handleAction(.setSaveError("Could not process image data"))
+            return
+        }
+        
+        UIImageWriteToSavedPhotosAlbum(image, self, #selector(saveCompleted), nil)
+    }
+    
+    @objc func saveCompleted(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        DispatchQueue.main.async {
+            if let error = error {
+                self.store.handleAction(.setSaveError(error.localizedDescription))
+            } else {
+                self.store.handleAction(.setSaveError(nil))
+            }
+            self.store.handleAction(.showSaveAlert(true))
+        }
     }
 }
