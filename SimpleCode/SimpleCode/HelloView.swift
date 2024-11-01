@@ -17,7 +17,7 @@ struct HelloView: View {
             VStack {
                 HelloShape()
                     .trim(from: 0.0, to: progress)
-                    .stroke(Color("MyColor"), style: StrokeStyle(lineWidth: 10, lineCap: .round, lineJoin: .round))
+                    .stroke(Color("Main_Primary"), style: StrokeStyle(lineWidth: 10, lineCap: .round, lineJoin: .round))
                     .aspectRatio(contentMode: .fit)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)

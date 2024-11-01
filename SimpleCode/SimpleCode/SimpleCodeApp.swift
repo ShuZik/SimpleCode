@@ -12,7 +12,7 @@ import SwiftData
 struct SimpleCodeApp: App {
     var body: some Scene {
         WindowGroup {
-            HelloView()
+            ContentView()
         }
     }
 }

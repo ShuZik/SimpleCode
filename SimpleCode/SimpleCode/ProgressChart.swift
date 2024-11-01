@@ -31,7 +31,7 @@ struct ProgressChartView: View {
                             angularInset: 2
                         )
                         .cornerRadius(10)
-                        .foregroundStyle(day >= element.day ? Color("MyColor") : Color("MyColor").opacity(0.3))
+                        .foregroundStyle(day >= element.day ? Color("Main_Primary") : Color("Main_Primary").opacity(0.3))
                     }
                 }
                 .frame(width: 250, height: 250)
