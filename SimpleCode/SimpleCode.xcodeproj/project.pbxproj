@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BA056EFD2C106142005D34FC /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA056EFC2C106142005D34FC /* GradientView.swift */; };
-		BA1AA7EE2CD454BC00E379AA /* MatrixRainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1AA7ED2CD454BC00E379AA /* MatrixRainView.swift */; };
 		BA6680922CCA93EF00D95364 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6680862CCA93EF00D95364 /* SecondaryButton.swift */; };
 		BA6680932CCA93EF00D95364 /* CircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6680842CCA93EF00D95364 /* CircularButton.swift */; };
 		BA6680942CCA93EF00D95364 /* IconImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6680882CCA93EF00D95364 /* IconImage.swift */; };
@@ -37,14 +36,13 @@
 		BA6680C02CCA93FD00D95364 /* SF-Pro-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = BA6680A12CCA93FD00D95364 /* SF-Pro-Text-Light.otf */; };
 		BA93667D2BEE1CCC00B93F90 /* SimpleCodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA93667C2BEE1CCC00B93F90 /* SimpleCodeApp.swift */; };
 		BA93667F2BEE1CCC00B93F90 /* HelloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA93667E2BEE1CCC00B93F90 /* HelloView.swift */; };
-		BA9366832BEE1CCD00B93F90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA9366822BEE1CCD00B93F90 /* Assets.xcassets */; };
 		BA9366AA2BEE1D0B00B93F90 /* ImgeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9366A92BEE1D0B00B93F90 /* ImgeTextView.swift */; };
 		BAD45A232C0CC59800293F18 /* ProgressChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD45A222C0CC59800293F18 /* ProgressChart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BA056EFC2C106142005D34FC /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
-		BA1AA7ED2CD454BC00E379AA /* MatrixRainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixRainView.swift; sourceTree = "<group>"; };
+		BA4F3C182CD4FDA400C4443E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA6680842CCA93EF00D95364 /* CircularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularButton.swift; sourceTree = "<group>"; };
 		BA6680852CCA93EF00D95364 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		BA6680862CCA93EF00D95364 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
@@ -74,7 +72,6 @@
 		BA9366792BEE1CCC00B93F90 /* SimpleCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA93667C2BEE1CCC00B93F90 /* SimpleCodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCodeApp.swift; sourceTree = "<group>"; };
 		BA93667E2BEE1CCC00B93F90 /* HelloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloView.swift; sourceTree = "<group>"; };
-		BA9366822BEE1CCD00B93F90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA9366842BEE1CCD00B93F90 /* SimpleCode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleCode.entitlements; sourceTree = "<group>"; };
 		BA9366A92BEE1D0B00B93F90 /* ImgeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgeTextView.swift; sourceTree = "<group>"; };
 		BAD45A222C0CC59800293F18 /* ProgressChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressChart.swift; sourceTree = "<group>"; };
@@ -159,9 +156,11 @@
 		BA6680A82CCA93FD00D95364 /* 􀈚 Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BA6680A72CCA93FD00D95364 /* Keys.swift */,
 				BA6680A52CCA93FD00D95364 /* Fonts */,
 				BA6680A62CCA93FD00D95364 /* Assets.xcassets */,
-				BA6680A72CCA93FD00D95364 /* Keys.swift */,
+				BA4F3C182CD4FDA400C4443E /* Info.plist */,
+				BA9366842BEE1CCD00B93F90 /* SimpleCode.entitlements */,
 			);
 			path = "􀈚 Resources";
 			sourceTree = "<group>";
@@ -216,14 +215,11 @@
 				BA9366A92BEE1D0B00B93F90 /* ImgeTextView.swift */,
 				BAD45A222C0CC59800293F18 /* ProgressChart.swift */,
 				BA056EFC2C106142005D34FC /* GradientView.swift */,
-				BA1AA7ED2CD454BC00E379AA /* MatrixRainView.swift */,
 				BA6680832CCA93D200D95364 /* 􀝦 Design System  */,
 				BA6680AA2CCA93FD00D95364 /* 􀏤 Model */,
 				BA6680AE2CCA93FD00D95364 /* 􀐖 Adapter */,
 				BA6680B02CCA93FD00D95364 /* 􀥮 Extension */,
 				BA6680A82CCA93FD00D95364 /* 􀈚 Resources */,
-				BA9366822BEE1CCD00B93F90 /* Assets.xcassets */,
-				BA9366842BEE1CCD00B93F90 /* SimpleCode.entitlements */,
 			);
 			path = SimpleCode;
 			sourceTree = "<group>";
@@ -296,7 +292,6 @@
 				BA6680BE2CCA93FD00D95364 /* SF-Pro-Text-Regular.otf in Resources */,
 				BA6680BF2CCA93FD00D95364 /* CanelaText-Regular.otf in Resources */,
 				BA6680C02CCA93FD00D95364 /* SF-Pro-Text-Light.otf in Resources */,
-				BA9366832BEE1CCD00B93F90 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +319,6 @@
 				BA6680972CCA93EF00D95364 /* PrimaryLabel.swift in Sources */,
 				BA6680982CCA93EF00D95364 /* PrimaryButton.swift in Sources */,
 				BA6680992CCA93EF00D95364 /* Shapes.swift in Sources */,
-				BA1AA7EE2CD454BC00E379AA /* MatrixRainView.swift in Sources */,
 				BA66809A2CCA93EF00D95364 /* Primitives.swift in Sources */,
 				BA66809B2CCA93EF00D95364 /* Theme.swift in Sources */,
 				BAD45A232C0CC59800293F18 /* ProgressChart.swift in Sources */,
@@ -454,14 +448,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = SimpleCode/SimpleCode.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/SimpleCode/􀈚 Resources/SimpleCode.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SimpleCode/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"$(SRCROOT)/SimpleCode/􀈚 Resources/Assets.xcassets\"";
 				DEVELOPMENT_TEAM = 42S7J6AXED;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/SimpleCode/􀈚 Resources/Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -492,14 +487,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = SimpleCode/SimpleCode.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/SimpleCode/􀈚 Resources/SimpleCode.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SimpleCode/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"$(SRCROOT)/SimpleCode/􀈚 Resources/Assets.xcassets\"";
 				DEVELOPMENT_TEAM = 42S7J6AXED;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/SimpleCode/􀈚 Resources/Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
