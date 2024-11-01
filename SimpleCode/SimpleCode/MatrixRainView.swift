@@ -21,7 +21,6 @@ struct MatrixRainView: View {
         ZStack {
             Color.black.edgesIgnoringSafeArea(.all)
             
-            // Текст из Матрицы с овальным фоном
             ZStack {
                 Ellipse()
                     .fill(Color.red.opacity(0.05))
@@ -57,7 +56,6 @@ struct MatrixRainView: View {
         }
     }
     
-    // Остальной код остается без изменений
     private func startRain() {
         for _ in 0...4 {
             DispatchQueue.main.asyncAfter(deadline: .now() + Double.random(in: 0...1.5)) {
@@ -75,7 +73,7 @@ struct MatrixRainView: View {
         
         characters = characters.map { character in
             var newChar = character
-            let fallSpeed = CGFloat.random(in: 7...20)
+            let fallSpeed = CGFloat.random(in: 7...15)
             newChar.y += fallSpeed
             
             let distanceFromIsland = newChar.y - (islandY + islandHeight/2)
