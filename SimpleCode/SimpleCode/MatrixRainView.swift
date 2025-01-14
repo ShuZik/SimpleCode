@@ -117,10 +117,8 @@ struct MatrixRainView: View {
     }
 }
 
-struct MatrixRainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MatrixRainView()
-    }
+#Preview {
+    MatrixRainView()
 }
 
 // MARL: - RainCharacter

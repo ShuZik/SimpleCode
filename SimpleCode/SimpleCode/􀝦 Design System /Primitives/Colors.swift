@@ -13,6 +13,8 @@ extension Color {
         static var Primary = colorForTheme("Primary")
         static var Secondary = colorForTheme("Secondary")
         static var Background = colorForTheme("Background")
+        static var Pink = colorForTheme("Pink")
+        static var Gray = colorForTheme("Gray")
     }
 }
 
@@ -48,3 +50,4 @@ extension Color: UserDefaultsThemeProtocol {
         return Color(theme + "_" + suffix)
     }
 }
+
