@@ -7,8 +7,8 @@
 
 public protocol Dispatcher {
 
-    associatedtype StateType
+    associatedtype ActionType: Action
     
-    func dispatch(_ action: StateType)
+    func dispatch(_ action: ActionType)
     func bindings()
 }
