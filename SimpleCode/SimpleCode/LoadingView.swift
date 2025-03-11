@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LoadingView: View {
     @State private var isDebugMode: Bool = true
+    @State private var viewSize: CGSize = .zero
     
     let startX = 20.0
     let startY = 100.0
@@ -24,7 +25,7 @@ struct LoadingView: View {
             // 2
             CGPoint(x: screenWidth, y: startY),
             // 3
-            CGPoint(x: screenWidth / 2, y: screenHeight / 1.7),
+            CGPoint(x: screenWidth / 2, y: screenHeight / 2 + 50),
             // 4
             CGPoint(x: startX, y: screenHeight),
             // 5
@@ -60,19 +61,39 @@ struct LoadingView: View {
                     }
                 }
                 
-                PathAnimationView(bezierPath: makeBezierPath())
+                PathAnimationView(bezierPath: Utils.bezierPath(from: points))
+
             }
         }
         .background(Color.Base.Background)
     }
+}
 
-    func makeBezierPath() -> UIBezierPath {
+// MARK: - Path Utils
+struct Utils {
+    static func path(from points: [CGPoint]) -> Path {
+        var path = Path()
+        guard points.count > 2 else { return path }
+
+        path.move(to: points[0])
+        path.addLine(to: points[1])
+        path.addQuadCurve(to: points[3], control: points[2])
+        path.addQuadCurve(to: points[5], control: points[4])
+        path.addLine(to: points[6])
+
+        return path
+    }
+
+    static func bezierPath(from points: [CGPoint]) -> UIBezierPath {
         let path = UIBezierPath()
+        guard points.count > 2 else { return path }
+
         path.move(to: points[0])
         path.addLine(to: points[1])
         path.addQuadCurve(to: points[3], controlPoint: points[2])
         path.addQuadCurve(to: points[5], controlPoint: points[4])
         path.addLine(to: points[6])
+
         return path
     }
 }
@@ -82,17 +103,7 @@ struct SomeShape: Shape {
     let points: [CGPoint]
 
     func path(in rect: CGRect) -> Path {
-        var path = Path()
-        
-        guard points.count > 2 else { return path }
-        
-        path.move(to: points[0])
-        path.addLine(to: points[1])
-        path.addQuadCurve(to: points[3], control: points[2])
-        path.addQuadCurve(to: points[5], control: points[4])
-        path.addLine(to: points[6])
-        
-        return path
+        Utils.path(from: points)
     }
 }
 
@@ -108,7 +119,7 @@ struct PathAnimationView: UIViewRepresentable {
         containerView.addSubview(animatedImageView)
         
         startAnimation(for: animatedImageView)
-
+        
         return containerView
     }
 
