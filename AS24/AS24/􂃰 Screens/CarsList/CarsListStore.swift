@@ -30,8 +30,12 @@ fileprivate extension CarsListStore {
         
         isLoading = true
         errorMessage = nil
-        
-        if ProcessInfo.processInfo.environment["XCODE_RUNNING_FOR_PREVIEWS"] != "1" {
+
+        if ProcessInfo.processInfo.environment["XCODE_RUNNING_UITEST"] == "1" {
+            loadMock()
+        } else if ProcessInfo.processInfo.environment["XCODE_RUNNING_FOR_PREVIEWS"] == "1" {
+            loadMock()
+        } else {
             Task {
                 let fetchedCars = await fetchCarsFromServer()
                 await MainActor.run {
@@ -42,10 +46,13 @@ fileprivate extension CarsListStore {
                     self.isLoading = false
                 }
             }
-        } else {
-            self.cars = CarModel.mockCars
-            self.isLoading = false
+
         }
+    }
+    
+    func loadMock() {
+        self.cars = CarModel.mockCars
+        self.isLoading = false
     }
     
     func selectCar(_ car: CarModel?) {

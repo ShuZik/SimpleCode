@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BA1BABC62D3A9AFB009022EC /* CarsListStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1BABC52D3A9AFB009022EC /* CarsListStoreTests.swift */; };
 		BA1BABC92D3A9B9A009022EC /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1BABC82D3A9B9A009022EC /* NetworkServiceTests.swift */; };
+		BA4E21D62D52AE950005C53E /* CarsListViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4E21D52D52AE950005C53E /* CarsListViewUITests.swift */; };
 		BA6491942D3AA1E500B9F4F3 /* CarDetailStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6491932D3AA1E500B9F4F3 /* CarDetailStoreTests.swift */; };
 		BA64919A2D3AA46B00B9F4F3 /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACF6C432D39518000D5BB09 /* CarModel.swift */; };
 		BACF6C2F2D394F9B00D5BB09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BACF6C2B2D394F9B00D5BB09 /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 /* Begin PBXFileReference section */
 		BA1BABC52D3A9AFB009022EC /* CarsListStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListStoreTests.swift; sourceTree = "<group>"; };
 		BA1BABC82D3A9B9A009022EC /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
+		BA4E21D52D52AE950005C53E /* CarsListViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListViewUITests.swift; sourceTree = "<group>"; };
 		BA6491932D3AA1E500B9F4F3 /* CarDetailStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailStoreTests.swift; sourceTree = "<group>"; };
 		BACF6BFB2D394F8400D5BB09 /* AS24.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AS24.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACF6C0B2D394F8600D5BB09 /* AS24Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AS24Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -207,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				BACF6C352D394FA000D5BB09 /* AS24UITests.swift */,
+				BA4E21D52D52AE950005C53E /* CarsListViewUITests.swift */,
 				BACF6C362D394FA000D5BB09 /* AS24UITestsLaunchTests.swift */,
 			);
 			path = AS24UITests;
@@ -469,6 +472,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA64919A2D3AA46B00B9F4F3 /* CarModel.swift in Sources */,
+				BA4E21D62D52AE950005C53E /* CarsListViewUITests.swift in Sources */,
 				BACF6C382D394FA000D5BB09 /* AS24UITests.swift in Sources */,
 				BACF6C392D394FA000D5BB09 /* AS24UITestsLaunchTests.swift in Sources */,
 			);

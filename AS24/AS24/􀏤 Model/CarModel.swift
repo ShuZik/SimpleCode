@@ -72,7 +72,7 @@ extension CarModel {
         )
     
     static let mockCars: [CarModel] = [
-        CarModel(id: 1,
+        CarModel(id: 0,
                  make: "Mock Volvo",
                  model: "XC90",
                  price: 19500,
@@ -88,7 +88,7 @@ extension CarModel {
                  seller: CarSellerModel(type: "Dealer", phone: "(073) 555 44 33", city: "Kyiv")
                 ),
         
-        CarModel(id: 2,
+        CarModel(id: 1,
                  make: "Mock Audi",
                  model: "A7",
                  price: 160000,
@@ -100,7 +100,7 @@ extension CarModel {
                  seller: CarSellerModel(type: "Private", phone: "+123456789", city: "Krakow")
                 ),
         
-        CarModel(id: 3,
+        CarModel(id: 2,
                  make: "Mock BMW",
                  model: "X7",
                  price: 160000,
