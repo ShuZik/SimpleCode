@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		BA056EFD2C106142005D34FC /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA056EFC2C106142005D34FC /* GradientView.swift */; };
 		BA1DC68B2D3699CC00B0302C /* SquidGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1DC68A2D3699CC00B0302C /* SquidGameView.swift */; };
-		BA20965A2D80728100BB0B18 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2096592D80728100BB0B18 /* Test.swift */; };
+		BA20965A2D80728100BB0B18 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2096592D80728100BB0B18 /* LoadingView.swift */; };
 		BA4F3C1A2CD4FE9500C4443E /* MatrixRainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4F3C192CD4FE9500C4443E /* MatrixRainView.swift */; };
 		BA4F3C1C2CD5037400C4443E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4F3C1B2CD5037400C4443E /* ContentView.swift */; };
 		BA6680922CCA93EF00D95364 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6680862CCA93EF00D95364 /* SecondaryButton.swift */; };
@@ -47,7 +47,7 @@
 /* Begin PBXFileReference section */
 		BA056EFC2C106142005D34FC /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		BA1DC68A2D3699CC00B0302C /* SquidGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquidGameView.swift; sourceTree = "<group>"; };
-		BA2096592D80728100BB0B18 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		BA2096592D80728100BB0B18 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		BA4F3C182CD4FDA400C4443E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA4F3C192CD4FE9500C4443E /* MatrixRainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixRainView.swift; sourceTree = "<group>"; };
 		BA4F3C1B2CD5037400C4443E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -226,7 +226,7 @@
 				BA056EFC2C106142005D34FC /* GradientView.swift */,
 				BA4F3C192CD4FE9500C4443E /* MatrixRainView.swift */,
 				BA1DC68A2D3699CC00B0302C /* SquidGameView.swift */,
-				BA2096592D80728100BB0B18 /* Test.swift */,
+				BA2096592D80728100BB0B18 /* LoadingView.swift */,
 				BA6680832CCA93D200D95364 /* 􀝦 Design System  */,
 				BA6680AA2CCA93FD00D95364 /* 􀏤 Model */,
 				BA6680AE2CCA93FD00D95364 /* 􀐖 Adapter */,
@@ -336,7 +336,7 @@
 				BA4F3C1A2CD4FE9500C4443E /* MatrixRainView.swift in Sources */,
 				BA66809A2CCA93EF00D95364 /* Primitives.swift in Sources */,
 				BA66809B2CCA93EF00D95364 /* Theme.swift in Sources */,
-				BA20965A2D80728100BB0B18 /* Test.swift in Sources */,
+				BA20965A2D80728100BB0B18 /* LoadingView.swift in Sources */,
 				BAD45A232C0CC59800293F18 /* ProgressChart.swift in Sources */,
 				BA93667D2BEE1CCC00B93F90 /* SimpleCodeApp.swift in Sources */,
 			);
