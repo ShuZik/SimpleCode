@@ -70,6 +70,7 @@ struct CarDetailView: View {
             }
             .padding(.horizontal)
         }
+        .navigationTitle(dispatcher.store.car.make)
     }
 }
 

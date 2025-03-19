@@ -24,7 +24,9 @@ struct CarsListView: View {
                     .onTapGesture {
                         dispatcher.dispatch(.selectCar(car))
                     }
+                    .accessibilityIdentifier("CarCell_\(car.id)")
             }
+            .accessibilityIdentifier("CarsListView")
             .listStyle(.plain)
             .navigationTitle("Cars")
             .navigationDestination(isPresented: Binding(
@@ -33,6 +35,7 @@ struct CarsListView: View {
             ), destination: {
                 if let car = dispatcher.store.selectedCar {
                     CarDetailView(car: car)
+                        .accessibilityIdentifier("CarDetailView")
                 }
             })
         }
@@ -43,6 +46,6 @@ struct CarsListView: View {
 }
  
 #Preview {
-    let dispatcher = CarsListDispatcher() // We could use Dependency Inversion if needed.
+    let dispatcher = CarsListDispatcher()
     return CarsListView(dispatcher: dispatcher)
 }

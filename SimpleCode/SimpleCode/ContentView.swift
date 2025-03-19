@@ -25,7 +25,8 @@ struct ContentView: View {
         ScreenItem(title: "Progress Chart", destination: ProgressChartView(portions: ProgressChartModel.mock ,day: 5)),
         ScreenItem(title: "Gradient View", destination: GradientView()),
         ScreenItem(title: "Matrix Rain", destination: MatrixRainView()),
-        ScreenItem(title: "Squid Game", destination: SquidGameView())
+        ScreenItem(title: "Squid Game", destination: SquidGameView()),
+        ScreenItem(title: "Bezier View", destination: BezierView())
     ]
     
     init() {

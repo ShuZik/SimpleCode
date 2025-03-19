@@ -34,8 +34,8 @@ protocol UserDefaultsThemeProtocol: UserDefaultsProtocol {
 extension UserDefaultsThemeProtocol {
     static func getTheme() -> ThemeType {
         #if DEBUG
-//            return Theme.Main
-            return Theme.Mono
+            return Theme.Main
+//            return Theme.Mono
         #else
             guard let themeValue = get(String.self, key: Keys.UserDefaults.Theme) else {
                 return Theme.Main
